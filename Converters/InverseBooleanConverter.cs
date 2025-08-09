@@ -6,20 +6,20 @@ using System.Windows.Data;
 namespace WpfAppPedidos.Converters
 {
     [ValueConversion(typeof(bool), typeof(bool))]
-    public class InverseBooleanConverter : IValueConverter
+    public class InverseBooleanConverter //: IValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (value is bool b)
-                return !b;
-            return true;
-        }
+        //public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        //{
+        //    if (value is bool b)
+        //        return !b;
+        //    return true;
+        //}
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (value is bool b)
-                return !b;
-            return false;
-        }
+        //public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        //{
+        //    if (value is bool b)
+        //        return !b;
+        //    return false;
+        //}
     }
 }

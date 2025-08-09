@@ -1,22 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace WpfAppPedidos.Models
 {
     public class Pessoa : INotifyPropertyChanged
     {
         private static int contador = 1;
+        //private int Id;
 
         public Pessoa()
         {
-            Id = contador++;
+            //Id = contador++;
         }
 
-        public int Id { get; private set; }
+        public int Id { get; set; }
+
+        //private int Id;
+        //public int Id
+        //{
+        //    get => Id;
+        //    set { Id = value; OnPropertyChanged(nameof(Id)); }
+        //}
 
         private string nome;
         public string Nome

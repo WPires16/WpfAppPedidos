@@ -23,6 +23,7 @@ namespace WpfAppPedidos.Views
         {
             pessoas = ArquivoHelper<Pessoa>.Load();
             pedidos = ArquivoHelper<Pedido>.Load();
+
             dgPessoas.ItemsSource = pessoas;
         }
 
@@ -105,22 +106,26 @@ namespace WpfAppPedidos.Views
         private void BtnIncluirPedido_Click(object sender, RoutedEventArgs e)
         {
             pessoaSelecionada = (Pessoa)dgPessoas.SelectedItem;
+
             if (pessoaSelecionada == null)
             {
                 MessageBox.Show("Selecione uma pessoa.");
                 return;
             }
 
-            //var pedidoWindow = new PedidoView(pessoaSelecionada);
-            //pedidoWindow.ShowDialog();
+            var pedidoWindow = new PedidoView(pessoaSelecionada);
+            pedidoWindow.ShowDialog();
             AtualizarPedidosPessoa();
         }
 
         private void AtualizarPedidosPessoa()
         {
+            pessoaSelecionada = (Pessoa)dgPessoas.SelectedItem;
+
             if (pessoaSelecionada == null) return;
 
             var pedidosPessoa = pedidos.Where(p => p.Pessoa.Id == pessoaSelecionada.Id).ToList();
+            //var pedidosPessoa = pedidos.Where(p => p.Id == pessoaSelecionada.Id).ToList();
 
             // Aplicar filtros de status conforme checkboxes
             var statusFiltros = new List<string>();
@@ -132,7 +137,7 @@ namespace WpfAppPedidos.Views
                 statusFiltros.Add("Recebido");
             }
 
-            //pedidosPessoa = pedidosPessoa.Where(p => statusFiltros.Contains(p.Status)).ToList();
+            pedidosPessoa = pedidosPessoa.Where(p => statusFiltros.Contains(p.Status)).ToList();
 
             dgPedidos.ItemsSource = pedidosPessoa;
         }
@@ -163,15 +168,22 @@ namespace WpfAppPedidos.Views
             var pedido = (Pedido)dgPedidos.SelectedItem;
             if (pedido == null) return;
 
-            //if (pedido.Status == novoStatus)
-            //{
-            //    MessageBox.Show($"Pedido já está marcado como {novoStatus}.");
-            //    return;
-            //}
+            if (pedido.Status == novoStatus)
+            {
+                MessageBox.Show($"Pedido já está marcado como {novoStatus}.");
+                return;
+            }
 
-            //pedido.Status = novoStatus;
+            pedido.Status = novoStatus;
             ArquivoHelper<Pedido>.Save(pedidos);
             AtualizarPedidosPessoa();
+        }
+
+        private void BtnbtnConsulta_Click(object sender, RoutedEventArgs e)
+        {
+            pedidos = ArquivoHelper<Pedido>.Load();
+
+            this.AtualizarPedidosPessoa();
         }
     }
 }

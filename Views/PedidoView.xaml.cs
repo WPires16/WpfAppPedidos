@@ -8,9 +8,6 @@ using WpfAppPedidos.Models;
 
 namespace WpfAppPedidos.Views
 {
-    /// <summary>
-    /// Lógica interna para PedidoView.xaml
-    /// </summary>
     public partial class PedidoView : Window
     {
         private Pessoa pessoa;

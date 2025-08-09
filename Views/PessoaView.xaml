@@ -48,6 +48,7 @@
                     <CheckBox x:Name="chkPendentes" Content="Pendentes" Checked="FiltroPedidos_Checked" Unchecked="FiltroPedidos_Checked" IsChecked="True" Margin="0,0,10,0"/>
                     <CheckBox x:Name="chkPagos" Content="Pagos" Checked="FiltroPedidos_Checked" Unchecked="FiltroPedidos_Checked" Margin="0,0,10,0"/>
                     <CheckBox x:Name="chkEntregues" Content="Entregues" Checked="FiltroPedidos_Checked" Unchecked="FiltroPedidos_Checked"/>
+                    <Button x:Name="btnConsulta" Content="Consultar" Margin="150,0,0,0" Click="BtnbtnConsulta_Click"/>
                 </StackPanel>
 
                 <DataGrid x:Name="dgPedidos" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
