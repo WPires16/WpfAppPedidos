@@ -77,7 +77,7 @@ namespace WpfAppPedidos.Views
             if (pessoaSelecionada == null)
             {
                 pessoaSelecionada = new Pessoa();
-                //pessoaSelecionada.Id = pessoas.Count > 0 ? pessoas.Max(p => p.Id) + 1 : 1;
+                pessoaSelecionada.Id = pessoas.Count > 0 ? pessoas.Max(p => p.Id) + 1 : 1;
                 pessoas.Add(pessoaSelecionada);
             }
 
@@ -125,8 +125,7 @@ namespace WpfAppPedidos.Views
             if (pessoaSelecionada == null) return;
 
             var pedidosPessoa = pedidos.Where(p => p.Pessoa.Id == pessoaSelecionada.Id).ToList();
-            //var pedidosPessoa = pedidos.Where(p => p.Id == pessoaSelecionada.Id).ToList();
-
+           
             // Aplicar filtros de status conforme checkboxes
             var statusFiltros = new List<string>();
             if (chkPendentes.IsChecked == true) statusFiltros.Add("Pendente");
@@ -147,7 +146,6 @@ namespace WpfAppPedidos.Views
             AtualizarPedidosPessoa();
         }
 
-        // Eventos para marcar status do pedido:
         private void BtnMarcarPago_Click(object sender, RoutedEventArgs e)
         {
             AlterarStatusPedido("Pago");
