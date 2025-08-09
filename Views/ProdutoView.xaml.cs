@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using WpfAppPedidos.Dados;
 using WpfAppPedidos.Models;
 
@@ -52,6 +53,7 @@ namespace WpfAppPedidos.Views
         {
             produtoSelecionado = null;
             txtNome.Text = "";
+            txtNome.Tag = "Enter your username";
             txtCodigo.Text = "";
             txtValor.Text = "";
             dgProdutos.SelectedItem = null;

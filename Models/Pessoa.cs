@@ -4,7 +4,7 @@ namespace WpfAppPedidos.Models
 {
     public class Pessoa : INotifyPropertyChanged
     {
-        private static int contador = 1;
+        //private static int contador = 1;
         //private int Id;
 
         public Pessoa()
