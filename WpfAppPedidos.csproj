@@ -66,6 +66,7 @@
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Dados\ArquivoHelper.cs" />
     <Compile Include="Models\FormaPagamentoEnumHelper.cs" />
+    <Compile Include="Models\ItemPedido.cs" />
     <Compile Include="Models\ProdutoPedido.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -135,7 +136,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Views\App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

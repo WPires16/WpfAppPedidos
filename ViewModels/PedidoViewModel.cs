@@ -17,8 +17,8 @@ namespace WpfAppPedidos.ViewModels
         private Produto produtoSelecionado;
         private ProdutoPedido produtoPedidoSelecionado;
 
-        private FormaPagamento formaPagamentoSelecionada;
-        private StatusPedido statusPedido;
+        //private FormaPagamento formaPagamentoSelecionada;
+        //private StatusPedido statusPedido;
 
         private DateTime dataVenda;
         private decimal valorTotal;
@@ -77,17 +77,17 @@ namespace WpfAppPedidos.ViewModels
             set { quantidadeProduto = value; OnPropertyChanged(nameof(QuantidadeProduto)); }
         }
 
-        public FormaPagamento FormaPagamentoSelecionada
-        {
-            get => formaPagamentoSelecionada;
-            set { formaPagamentoSelecionada = value; OnPropertyChanged(nameof(FormaPagamentoSelecionada)); }
-        }
+        //public FormaPagamento FormaPagamentoSelecionada
+        //{
+        //    get => formaPagamentoSelecionada;
+        //    set { formaPagamentoSelecionada = value; OnPropertyChanged(nameof(FormaPagamentoSelecionada)); }
+        //}
 
-        public StatusPedido StatusPedido
-        {
-            get => statusPedido;
-            set { statusPedido = value; OnPropertyChanged(nameof(StatusPedido)); }
-        }
+        //public StatusPedido StatusPedido
+        //{
+        //    get => statusPedido;
+        //    set { statusPedido = value; OnPropertyChanged(nameof(StatusPedido)); }
+        //}
 
         public DateTime DataVenda
         {

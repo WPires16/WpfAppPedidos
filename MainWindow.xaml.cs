@@ -34,8 +34,8 @@ namespace WpfAppPedidos
 
         private void BtnProdutos_Click(object sender, RoutedEventArgs e)
         {
-            //var janela = new ProdutoWindow();
-            //janela.ShowDialog();
+            var janela = new ProdutoView();
+            janela.ShowDialog();
         }
 
         private void BtnPedidos_Click(object sender, RoutedEventArgs e)
