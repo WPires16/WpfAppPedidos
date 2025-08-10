@@ -14,6 +14,7 @@ namespace WpfAppPedidos.Views
     /// </summary>
     public partial class ProdutoView : Window
     {
+        private List<Produto> filtrados;
         private List<Produto> produtos;
         private Produto produtoSelecionado;
 
@@ -40,11 +41,18 @@ namespace WpfAppPedidos.Views
             decimal.TryParse(txtFiltroValorMin.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out valorMin);
             decimal.TryParse(txtFiltroValorMax.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out valorMax);
 
-            var filtrados = produtos.Where(p =>
+            filtrados = produtos.Where(p =>
                 (string.IsNullOrEmpty(nomeFiltro) || p.Nome.ToLower().Contains(nomeFiltro)) &&
-                (string.IsNullOrEmpty(codigoFiltro) || p.Codigo.ToLower().Contains(codigoFiltro)) &&
-                (p.Valor >= valorMin && p.Valor <= valorMax)
+                (string.IsNullOrEmpty(codigoFiltro) || p.Codigo.ToLower().Contains(codigoFiltro)) //&&
+               // (p.Valor >= valorMin && p.Valor <= valorMax)
             ).ToList();
+
+            if (valorMin > 0 || valorMax > 0)
+            {
+                filtrados = produtos.Where(p =>
+               (p.Valor >= valorMin && p.Valor <= valorMax)
+                ).ToList();
+            }
 
             dgProdutos.ItemsSource = filtrados;
         }
@@ -115,6 +123,11 @@ namespace WpfAppPedidos.Views
                 dgProdutos.ItemsSource = null;
                 dgProdutos.ItemsSource = produtos;
             }
+        }
+
+        private void txtValor_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

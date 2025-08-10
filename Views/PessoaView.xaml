@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WpfAppPedidos.Views.PessoaView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Cadastro de Pessoas" Height="450" Width="700">
+        Title="Cadastro de Pessoas" Height="450" Width="900">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -13,11 +13,8 @@
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
             <TextBox Width="200" x:Name="txtFiltroNome"  TextChanged="Filtro_TextChanged"/>
             <TextBox Width="150" Margin="10,0,0,0" x:Name="txtFiltroCPF"  TextChanged="Filtro_TextChanged"/>
-            <Button Content="Novo" Margin="10,0,0,0" Click="BtnNovo_Click"/>
-            <Button Content="Editar" Margin="5,0,0,0" Click="BtnEditar_Click"/>
-            <Button Content="Excluir" Margin="5,0,0,0" Click="BtnExcluir_Click"/>
-            <Button Content="Salvar" Margin="5,0,0,0" Click="BtnSalvar_Click"/>
-            <Button Content="Incluir Pedido" Margin="10,0,0,0" Click="BtnIncluirPedido_Click"/>
+            
+            
         </StackPanel>
 
         <DataGrid x:Name="dgPessoas" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
@@ -34,6 +31,10 @@
             <TextBox Width="200" x:Name="txtNome" />
             <TextBox Width="150" Margin="10,0,0,0" x:Name="txtCPF" />
             <TextBox Width="200" Margin="10,0,0,0" x:Name="txtEndereco" />
+            <Button Content="Novo" Margin="10,0,0,0" Click="BtnNovo_Click"/>
+            <Button Content="Editar" Margin="5,0,0,0" Click="BtnEditar_Click" Background="#FFF7E697"/>
+            <Button Content="Excluir" Margin="5,0,0,0" Click="BtnExcluir_Click" Background="#FFF79B9B"/>
+            <Button Content="Salvar" Margin="5,0,0,0" Click="BtnSalvar_Click" Background="#FFACECAD"/>
         </StackPanel>
 
         <!-- Grid de Pedidos da pessoa -->
@@ -49,6 +50,7 @@
                     <CheckBox x:Name="chkPagos" Content="Pagos" Checked="FiltroPedidos_Checked" Unchecked="FiltroPedidos_Checked" Margin="0,0,10,0"/>
                     <CheckBox x:Name="chkEntregues" Content="Entregues" Checked="FiltroPedidos_Checked" Unchecked="FiltroPedidos_Checked"/>
                     <Button x:Name="btnConsulta" Content="Consultar" Margin="150,0,0,0" Click="BtnbtnConsulta_Click"/>
+                    <Button Content="Incluir Pedido" Margin="10,0,0,0" Click="BtnIncluirPedido_Click" Background="#FFACECAD"/>
                 </StackPanel>
 
                 <DataGrid x:Name="dgPedidos" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
