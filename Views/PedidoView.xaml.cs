@@ -20,6 +20,8 @@ namespace WpfAppPedidos.Views
         {
             InitializeComponent();
 
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
             pessoa = pessoaSelecionada;
             txtPessoa.Text = pessoa.Nome;
 

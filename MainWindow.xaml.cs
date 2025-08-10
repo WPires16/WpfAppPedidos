@@ -11,6 +11,8 @@ namespace WpfAppPedidos
         public MainWindow()
         {
             InitializeComponent();
+
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void BtnPessoas_Click(object sender, RoutedEventArgs e)
@@ -27,9 +29,9 @@ namespace WpfAppPedidos
 
         private void BtnPedidos_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Use a tela de Pessoas para criar pedidos vinculados.");
-            //var janela = new PedidoView();
-            //janela.ShowDialog();
+            //MessageBox.Show("Use a tela de Pessoas para criar pedidos vinculados.");
+            var janela = new PessoaView();
+            janela.ShowDialog();
         }
     }
 }

@@ -17,6 +17,8 @@ namespace WpfAppPedidos.Views
         {
             InitializeComponent();
             CarregarDados();
+
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void CarregarDados()
@@ -74,6 +76,11 @@ namespace WpfAppPedidos.Views
                 return;
             }
 
+            if (string.IsNullOrEmpty(txtEndereco.Text))
+            {
+                txtEndereco.Text = "N/A";
+            }
+
             if (pessoaSelecionada == null)
             {
                 pessoaSelecionada = new Pessoa();
@@ -120,9 +127,17 @@ namespace WpfAppPedidos.Views
 
         private void AtualizarPedidosPessoa()
         {
+            //pessoaSelecionada = (Pessoa)dgPessoas.SelectedItem;
+
+            //if (pessoaSelecionada == null) return;
             pessoaSelecionada = (Pessoa)dgPessoas.SelectedItem;
 
-            if (pessoaSelecionada == null) return;
+            if (pessoaSelecionada == null)
+            {
+                MessageBox.Show("Selecione uma pessoa.");
+                return;
+            }
+
 
             var pedidosPessoa = pedidos.Where(p => p.Pessoa.Id == pessoaSelecionada.Id).ToList();
            

@@ -22,6 +22,8 @@ namespace WpfAppPedidos.Views
         {
             InitializeComponent();
             CarregarDados();
+
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void CarregarDados()
