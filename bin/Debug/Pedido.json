@@ -1,0 +1,152 @@
+[
+  {
+    "Id": 1,
+    "Pessoa": {
+      "Id": 1,
+      "Nome": "wellington",
+      "CPF": "22495021883",
+      "Endereco": "Ru teste"
+    },
+    "Itens": [
+      {
+        "Produto": {
+          "Id": 1,
+          "Nome": "Produto 2",
+          "Codigo": "123",
+          "Valor": 10.0
+        },
+        "Quantidade": 1
+      }
+    ],
+    "ValorTotal": 10.0,
+    "DataVenda": "2025-08-09T12:57:45.7736343-03:00",
+    "FormaPagamento": "Dinheiro",
+    "Status": "Recebido",
+    "Finalizado": true
+  },
+  {
+    "Id": 2,
+    "Pessoa": {
+      "Id": 2,
+      "Nome": "oloco ",
+      "CPF": "22495021883",
+      "Endereco": "teste ggg6"
+    },
+    "Itens": [
+      {
+        "Produto": {
+          "Id": 2,
+          "Nome": "produto 1",
+          "Codigo": "1234",
+          "Valor": 25.0
+        },
+        "Quantidade": 2
+      }
+    ],
+    "ValorTotal": 50.0,
+    "DataVenda": "2025-08-09T13:25:36.3745031-03:00",
+    "FormaPagamento": "Cartão",
+    "Status": "Pago",
+    "Finalizado": true
+  },
+  {
+    "Id": 3,
+    "Pessoa": {
+      "Id": 1,
+      "Nome": "wellington",
+      "CPF": "22495021883",
+      "Endereco": "Ru teste"
+    },
+    "Itens": [
+      {
+        "Produto": {
+          "Id": 1,
+          "Nome": "Produto 2",
+          "Codigo": "123",
+          "Valor": 10.0
+        },
+        "Quantidade": 10
+      }
+    ],
+    "ValorTotal": 100.0,
+    "DataVenda": "2025-08-09T13:40:28.2788046-03:00",
+    "FormaPagamento": "Boleto",
+    "Status": "Pendente",
+    "Finalizado": true
+  },
+  {
+    "Id": 4,
+    "Pessoa": {
+      "Id": 1,
+      "Nome": "wellington",
+      "CPF": "22495021883",
+      "Endereco": "Ru teste"
+    },
+    "Itens": [
+      {
+        "Produto": {
+          "Id": 1,
+          "Nome": "Produto 2",
+          "Codigo": "123",
+          "Valor": 10.0
+        },
+        "Quantidade": 16
+      }
+    ],
+    "ValorTotal": 160.0,
+    "DataVenda": "2025-08-09T15:04:36.569399-03:00",
+    "FormaPagamento": "Dinheiro",
+    "Status": "Pendente",
+    "Finalizado": true
+  },
+  {
+    "Id": 5,
+    "Pessoa": {
+      "Id": 2,
+      "Nome": "oloco ",
+      "CPF": "22495021883",
+      "Endereco": "teste ggg6"
+    },
+    "Itens": [
+      {
+        "Produto": {
+          "Id": 2,
+          "Nome": "produto 1",
+          "Codigo": "1234",
+          "Valor": 25.0
+        },
+        "Quantidade": 15
+      }
+    ],
+    "ValorTotal": 375.0,
+    "DataVenda": "2025-08-09T15:09:03.0012835-03:00",
+    "FormaPagamento": "Cartão",
+    "Status": "Recebido",
+    "Finalizado": true
+  },
+  {
+    "Id": 6,
+    "Pessoa": {
+      "Id": 2,
+      "Nome": "oloco ",
+      "CPF": "22495021883",
+      "Endereco": "teste ggg6"
+    },
+    "Itens": [
+      {
+        "Produto": {
+          "Id": 1,
+          "Nome": "Produto 2",
+          "Codigo": "123",
+          "Valor": 10.0
+        },
+        "Quantidade": 1
+      }
+    ],
+    "ValorTotal": 10.0,
+    "DataVenda": "2025-08-10T03:46:58.4163698-03:00",
+    "FormaPagamento": "Cartão",
+    "Status": "Pendente",
+    "Finalizado": true
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Nome": "wellington",
+    "CPF": "22495021883",
+    "Endereco": "Ru teste"
+  },
+  {
+    "Id": 2,
+    "Nome": "oloco ",
+    "CPF": "22495021883",
+    "Endereco": "teste ggg6"
+  },
+  {
+    "Id": 3,
+    "Nome": "teste nome ",
+    "CPF": "22495021883",
+    "Endereco": "teste endereço"
+  },
+  {
+    "Id": 4,
+    "Nome": "Luiz",
+    "CPF": "22495021883",
+    "Endereco": "Rua 4"
+  },
+  {
+    "Id": 5,
+    "Nome": "SIR",
+    "CPF": "22495021883",
+    "Endereco": "N/A"
+  }
+]
